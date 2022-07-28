@@ -35,7 +35,7 @@ function printSongDetails(songs) {
  * @param {Object[]} songs - An array of songs. See the song data for more.
  */
 function printSongTitlesOverThreeMinutes(songs) {
-  songs.forEach(song => {if( 180 < song.runtimeInSeconds)console.log(song.title)})
+  songs.forEach(song => 180 < song.runtimeInSeconds ? console.log(song.title):null)
 }
 
 module.exports = {
