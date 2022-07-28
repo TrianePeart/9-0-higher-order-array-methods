@@ -39,9 +39,12 @@ function getSongDetails(songs) {
  *  getTitleAndArtist(songs);
  *  //> [ { "Berlin Tsukin": "Taiyo Ky" }, { Up: "Sebastian Kamae" }, ... ]
  */
-function getTitleAndArtist(songs) {}
+function getTitleAndArtist(songs) {
+  return songs.map(song => {return {[song.title]: song.artist}})
+  //ASK WHY did this need the second return to work? 
+}
 
-module.exports = {
+module.exports = { 
   getSongTitles,
   getSongDetails,
   getTitleAndArtist,
